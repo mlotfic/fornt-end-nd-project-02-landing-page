@@ -106,7 +106,6 @@ sections.forEach(section => {
 
   });
 
-
 /* --- The active section in the Navbar should be highlighted. --- */
 
 // Select all anchors inside navigation
@@ -118,16 +117,38 @@ document.addEventListener("scroll", () => {
     makeActive(sections, navLinks);
 });
 
-/**
- * End Main Functions
- * Begin Events
- * 
+/* --- Add class 'active' to section when near top of viewport --- */
+/* Creating an intersection observer 
+    https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 */
 
-// Build menu 
+// observer options
+const options = {
+    root      : null,  // Uses the viewport as the root
+    rootMargin: "0px", // allowing intersections to be triggered sooner or later
+    threshold : 0.7,   // Trigger when 60% of the section is visible
+  };
 
-// Scroll to section on link click
+// observer callback
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add 'main__active_section' class to the current section
+        entry.target.classList.add("main__active_section");
+      } else {
+        // Remove 'main__active_section' class when section is out of view
+        entry.target.classList.remove("main__active_section");
+      }
+    });
+  }, options);
 
-// Set sections as active
+// activate section view observer
+sections.forEach(section => {
+    observer.observe(section);
+});
 
+/**
+ * End Main Functions
+ * 
+*/
 
