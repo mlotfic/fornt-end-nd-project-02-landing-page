@@ -51,10 +51,9 @@ function makeActive(sections, navLinks) {
       if (box.top <= window.innerHeight / 2 && box.bottom >= window.innerHeight / 2) {
         /* apply active state on the current section and the corresponding Nav link.
            by removing active class from all links */
-        console.log(index);
-        
+        // console.log(index);        
         navLinks.forEach(link => {
-            console.log(link);
+            // console.log(link);
             // Ensure navLinks[index] exists before accessing classList
             link.classList.remove("active");    
         });
@@ -63,9 +62,9 @@ function makeActive(sections, navLinks) {
         */
        // Ensure navLinks[index] exists before accessing classList
        if (navLinks[index]) {
-        navLinks[index].classList.add("active");
-        console.log(navLinks[index].classList);
-        console.log(index);
+            navLinks[index].classList.add("active");
+            // console.log(navLinks[index].classList);
+            // console.log(index);
         }
       }
     });
