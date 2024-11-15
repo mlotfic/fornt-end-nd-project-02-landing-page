@@ -45,8 +45,7 @@ Create a responsive landing page on the modern desktop, tablet, and phone browse
 
 ## Development
 
-### Code Structure
-Folders/Files Explanation:
+Code Structure:
 
 ```text
 Files -|
