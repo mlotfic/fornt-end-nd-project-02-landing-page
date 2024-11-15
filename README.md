@@ -6,7 +6,7 @@ This project requires you to build a multi-section landing page, with a dynamica
 
 ## Quickstart/Demo
 
-you can find live demo [Here]() done by [Github Page](https://pages.github.com/)
+you can find live demo [Here](https://mlotfic.github.io/fornt-end-nd-project-02-landing-page/) done by [Github Page](https://pages.github.com/)
 
 ## Table of Contents
 
