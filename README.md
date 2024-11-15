@@ -32,6 +32,7 @@ code .
 [(Back to top)](#table-of-contents)
 
 ## Usage
+
 ![Alt Text](./img/active-state.gif)
 Set class to active state on the navigation items when a section is in the viewport.
 
