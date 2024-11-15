@@ -30,8 +30,6 @@ console.log(sections);
 const navList  = document.getElementById("navbar__list");
 console.log(navList);
 
-
-
 /**
  * End Global Variables
  * Start Helper Functions
@@ -84,7 +82,9 @@ sections.forEach(section => {
        - classlist:"menu__link"    
     */
     const navLink = document.createElement("a");  
-    navLink.textContent = section.getAttribute("data-nav");
+    // navLink.textContent = section.getAttribute("data-nav");
+    navLink.innerHTML = section.getAttribute("data-nav");
+
     navLink.href = `#${section.id}`;
     navLink.classList.add("menu__link");
 
@@ -93,7 +93,7 @@ sections.forEach(section => {
     
     // attach to navbar
     navList.appendChild(navItem);
-    navItem.appendChild(navLink); 
+    navItem.append(navLink); 
 
     /* ---------- Scroll to anchor ID using scrollTO event ----------- */
     navLink.addEventListener("click", () => {        
