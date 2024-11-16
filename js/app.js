@@ -136,6 +136,8 @@ const observer = new IntersectionObserver((entries) => {
       if (entry.isIntersecting) {
         // Add 'main__active_section' class to the current section
         entry.target.classList.add("main__active_section");
+        // updating the link hash to match the id of the visible section
+        history.replaceState(null, null, `#${entry.target.id}`);
       } else {
         // Remove 'main__active_section' class when section is out of view
         entry.target.classList.remove("main__active_section");
