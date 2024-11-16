@@ -96,7 +96,9 @@ sections.forEach(section => {
     navItem.append(navLink); 
 
     /* ---------- Scroll to anchor ID using scrollTO event ----------- */
-    navLink.addEventListener("click", () => {        
+    navLink.addEventListener("click", (event) => { 
+        // fix smooth transition  
+        event.preventDefault()    
         window.scrollTo({
             top: section.offsetTop,
             behavior: "smooth"
