@@ -227,3 +227,23 @@ section.main__active_section .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
+/* -- target screens with a max width of 480px -- */
+@media screen and (max-width: 480px) {    
+    /* Navigation Styles*/
+    .navbar__menu {
+        padding: 0px 0px;   /* remove padding */
+        display: flex;      /* items are flexbox aligned */
+        flex-wrap: wrap;    /* allow wrapping */
+    }
+    /* Navigation link */
+    .navbar__menu .menu__link { 
+        padding: 0px 0px;  /* remove padding */
+        font-size: 0.8em;  /* reduce font size */
+    }
+
+    /* Landing Container Styles */
+    .landing__container {
+        font-size: 0.8em;  /* reduce font size */
+    }
+}
